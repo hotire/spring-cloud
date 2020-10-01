@@ -2,7 +2,6 @@ package com.github.hotire.loadbalancer;
 
 import java.util.List;
 
-import org.springframework.cloud.client.DefaultServiceInstance;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
 import org.springframework.cloud.loadbalancer.core.ServiceInstanceListSupplier;
@@ -23,7 +22,7 @@ public class LoadbalancerConfig {
             return new AbstractServiceInstanceListSupplier("web-service") {
                 @Override
                 public Flux<List<ServiceInstance>> get() {
-                    return Flux.just(List.of(new DefaultServiceInstance(getServiceId() + "1", getServiceId(), "localhost", 8081, false)));
+                    return Flux.just(List.of(createDefaultServiceInstance("localhost", 8081, false)));
                 }
             };
         }
