@@ -21,4 +21,8 @@ public abstract class AbstractServiceInstanceListSupplier implements ServiceInst
     public DefaultServiceInstance createDefaultServiceInstance(final String host, final int port, final boolean secure) {
         return new DefaultServiceInstance(getServiceId() + serviceCount.getAndIncrement(), getServiceId(), host, port, secure);
     }
+
+    public DefaultServiceInstance createDefaultServiceInstance(final String host, final int port) {
+        return new DefaultServiceInstance(getServiceId() + serviceCount.getAndIncrement(), getServiceId(), host, port, false);
+    }
 }
