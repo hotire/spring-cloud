@@ -22,7 +22,7 @@ public class LoadbalancerConfig {
             return new AbstractServiceInstanceListSupplier("web-service") {
                 @Override
                 public Flux<List<ServiceInstance>> get() {
-                    return Flux.just(List.of(createDefaultServiceInstance("localhost", 8081, false)));
+                    return Flux.just(List.of(createDefaultServiceInstance("localhost", 8081)));
                 }
             };
         }
