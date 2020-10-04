@@ -21,7 +21,4 @@ public class LoadbalancerService {
                         .bodyToMono(String.class)
                         .log();
     }
-
-
-
 }
