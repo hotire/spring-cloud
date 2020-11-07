@@ -13,7 +13,7 @@
   <dependencies>
     <dependency>
       <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-config</artifactId>
+      <artifactId>spring-cloud-config-server</artifactId>
     </dependency>
   </dependencies>
 
