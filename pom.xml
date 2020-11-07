@@ -12,6 +12,7 @@
     <module>web-service</module>
     <module>loadbalancer</module>
     <module>gateway</module>
+    <module>config</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
