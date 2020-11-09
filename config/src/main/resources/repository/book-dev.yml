@@ -1,2 +1,9 @@
 book:
+  name: bakery
+
+---
+
+spring.profiles: author
+
+book:
   author: hotire
