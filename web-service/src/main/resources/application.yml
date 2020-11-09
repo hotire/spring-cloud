@@ -1,2 +1,4 @@
 server:
   port: 8081
+
+spring.cloud.config.uri: http://localhost:8888
