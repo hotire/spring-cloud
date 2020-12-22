@@ -21,5 +21,11 @@ spring.sleuth.messaging.kafka.enabled = true
 ProducerFactory and ConsumerFactory so that tracing headers get injected into the created Spring Kafka’s Producer and Consumer.
 
 ~~~java
-
+	@Configuration(proxyBeanMethods = false)
+	@ConditionalOnProperty(value = "spring.sleuth.messaging.kafka.enabled",
+			matchIfMissing = true)
+	@ConditionalOnClass(ProducerFactory.class)
+	protected static class SleuthKafkaConfiguration {
+    
+	}
 ~~~
