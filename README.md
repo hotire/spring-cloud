@@ -29,3 +29,14 @@ ProducerFactory and ConsumerFactory so that tracing headers get injected into th
     
 	}
 ~~~
+
+~~~java
+    @Pointcut("execution(public * org.springframework.kafka.core.ProducerFactory.createProducer(..))")
+	private void anyProducerFactory() {
+	} // NOSONAR
+
+	@Pointcut("execution(public * org.springframework.kafka.core.ConsumerFactory.createConsumer(..))")
+	private void anyConsumerFactory() {
+	} // NOSONAR
+~~~
+: AOP에 의해 sleuth 설정을 함
