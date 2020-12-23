@@ -16,6 +16,8 @@ https://github.com/hotire/spring-cloud/tree/master/loadbalancer
 
 ### Kafka
 
+https://github.com/hotire/spring-kafka
+
 spring.sleuth.messaging.kafka.enabled = true
 
 ProducerFactory and ConsumerFactory so that tracing headers get injected into the created Spring Kafka’s Producer and Consumer.
