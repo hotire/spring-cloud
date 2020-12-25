@@ -16,7 +16,8 @@ https://github.com/hotire/spring-cloud/tree/master/loadbalancer
 
 ### Kafka
 
-https://github.com/hotire/spring-kafka
+- https://github.com/hotire/spring-kafka
+- test : https://www.baeldung.com/spring-boot-kafka-testing
 
 spring.sleuth.messaging.kafka.enabled = true
 
