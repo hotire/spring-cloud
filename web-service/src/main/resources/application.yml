@@ -9,5 +9,8 @@ spring:
     consumer:
       auto-offset-reset: earliest
       group-id: hotire
+    listener:
+      ack-mode: manual
+
 test:
   topic: embedded-test-topic
