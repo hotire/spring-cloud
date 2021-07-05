@@ -1,16 +1,13 @@
-server:
-  port: 8081
-
-spring.cloud.config.uri: http://localhost:8888
-
-
+---
 spring:
+  profiles: dev
   kafka:
     consumer:
       auto-offset-reset: earliest
       group-id: hotire
     listener:
       ack-mode: manual
+  cloud.config.uri: http://localhost:8888
 
 test:
   topic: embedded-test-topic

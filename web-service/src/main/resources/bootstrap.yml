@@ -1,0 +1,12 @@
+server:
+  port: 8081
+
+spring:
+  application.name: book
+  profiles.active: dev
+
+---
+
+spring:
+  profiles: dev
+  cloud.config.uri: http://localhost:8888
