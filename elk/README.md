@@ -4,6 +4,10 @@
 
 https://github.com/elastic/logstash
 
+### Shutdown
+https://www.elastic.co/guide/en/logstash/current/shutdown.html
+
+
 ### grok
 
 test : https://grokdebug.herokuapp.com/
