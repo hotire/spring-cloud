@@ -9,6 +9,9 @@ import feign.codec.DecodeException;
 import feign.codec.Decoder;
 import lombok.RequiredArgsConstructor;
 
+/**
+ * @see org.springframework.cloud.openfeign.support.SpringDecoder
+ */
 @RequiredArgsConstructor
 public class DecoderDecorator implements Decoder {
 
