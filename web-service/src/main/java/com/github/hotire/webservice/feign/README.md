@@ -14,3 +14,8 @@ default true로 primary로 설정된다.
 
 https://blog.naver.com/gngh0101/222551685734 
 
+
+### InvocationHandlerFactory.MethodHandler 
+
+
+### SynchronousMethodHandler
