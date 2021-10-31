@@ -1,0 +1,6 @@
+package com.github.hotire.webservice.feign.config;
+
+import org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider;
+
+public class CustomClassPathScanningCandidateComponentProvider extends ClassPathScanningCandidateComponentProvider {
+}
