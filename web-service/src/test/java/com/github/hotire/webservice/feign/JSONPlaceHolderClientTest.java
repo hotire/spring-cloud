@@ -12,6 +12,6 @@ class JSONPlaceHolderClientTest {
 
     @Test
     void getPosts() {
-        client.getPosts();
+        client.getPosts(1L, "hello");
     }
 }
