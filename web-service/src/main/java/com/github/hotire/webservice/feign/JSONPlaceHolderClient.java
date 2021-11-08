@@ -11,5 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface JSONPlaceHolderClient {
 
     @GetMapping("/posts/{id}")
-    List<Post> getPosts(@PathVariable Long id, @RequestParam String name);
+    List<Post> getPostsWithPathAndQuery(@PathVariable Long id, @RequestParam String name);
+
+    @GetMapping("/posts")
+    List<Post> getPosts();
 }

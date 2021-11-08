@@ -12,6 +12,6 @@ class JSONPlaceHolderClientTest {
 
     @Test
     void getPosts() {
-        client.getPosts(1L, "hello");
+        client.getPostsWithPathAndQuery(1L, "hello");
     }
 }
