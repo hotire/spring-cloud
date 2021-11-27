@@ -2,6 +2,8 @@
 
 ![cloud](doc/img/cloud.jpg)
 
+- Release train Spring Boot compatibility : https://spring.io/projects/spring-cloud
+
 ### Netflix
 
 https://github.com/hotire/spring-netflix-cloud
