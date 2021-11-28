@@ -1,6 +1,6 @@
 package com.github.hotire.webservice.feign.fallback;
 
-import feign.hystrix.FallbackFactory;
+import org.springframework.cloud.openfeign.FallbackFactory;
 
 public class MyFeignClientFallbackFactory implements FallbackFactory<MyFeignClient> {
 
