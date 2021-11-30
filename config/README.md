@@ -24,3 +24,14 @@ http://blog.eomdev.com/springcloud/2019/03/21/Spring-Cloud-Config.html
 /{application}-{profile}.properties
 /{label}/{application}-{profile}.properties
 ~~~
+
+### 2.5.x 변경사항 
+
+사용하는 쪽에서 spring-cloud-starter-bootstrap 필요하고 아래와 같이 설정이 필요하다.
+
+~~~yml
+spring:
+ config:
+    import: optional:configserver:http://localhost:8888
+~~~
+ 
