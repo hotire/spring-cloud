@@ -4,14 +4,11 @@ server:
 spring:
   application.name: book
   profiles.active: dev
-
-
+  config:
+    import: optional:configserver:http://localhost:8888
 
 
 ---
 
 spring:
   profiles: dev
-  spring:
-    config:
-      import: optional:configserver:http://localhost:8888
