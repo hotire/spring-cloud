@@ -25,7 +25,7 @@ http://blog.eomdev.com/springcloud/2019/03/21/Spring-Cloud-Config.html
 /{label}/{application}-{profile}.properties
 ~~~
 
-### 2.5.x 변경사항 
+### 2.4.x 변경사항 
 
 사용하는 쪽에서 spring-cloud-starter-bootstrap 필요하고 아래와 같이 설정이 필요하다.
 
@@ -35,3 +35,6 @@ spring:
     import: optional:configserver:http://localhost:8888
 ~~~
  
+### When using spring.config.import with configserver , we cannot override with local files
+ 
+- https://github.com/spring-cloud/spring-cloud-config/issues/2006
