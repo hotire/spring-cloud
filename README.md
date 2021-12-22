@@ -4,6 +4,9 @@
 
 - Release train Spring Boot compatibility : https://spring.io/projects/spring-cloud
 
+- Spring Cloud 2021.0 Release Notes : https://github.com/spring-cloud/spring-cloud-release/wiki/Spring-Cloud-2021.0-Release-Notes
+
+
 ### Netflix
 
 https://github.com/hotire/spring-netflix-cloud
