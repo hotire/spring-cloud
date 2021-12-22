@@ -9,7 +9,11 @@ import feign.Request;
  * contentUTF8() = responseBody.orEmpty()
  */
 public class CustomFeignException extends FeignException {
-    protected CustomFeignException(int status, String message, Request request, Throwable cause, byte[] responseBody) {
-        super(status, message, request, cause, responseBody);
+    protected CustomFeignException(int status, String message, Throwable cause) {
+        super(status, message, cause);
     }
+    // boot 2.6.0 before
+//    protected CustomFeignException(int status, String message, Request request, Throwable cause, byte[] responseBody) {
+//        super(status, message, request, cause, responseBody);
+//    }
 }
