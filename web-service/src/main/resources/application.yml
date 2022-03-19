@@ -1,6 +1,19 @@
 feign:
   hystrix:
     enabled: true
+  circuitbreaker:
+    enabled: true
+
+hystrix.command:
+  fallbackClient_getPostsWithPathAndQuery:
+    circuitBreaker:
+      requestVolumeThreshold: 1
+      sleepWindowInMilliseconds: 10000
+      errorThresholdPercentage: 50
+      metrics.rollingStats.timeInMilliseconds: 3000
+  execution.isolation.thread.timeoutInMilliseconds: 100000
+
+
 ---
 spring:
   profiles: dev
@@ -14,4 +27,7 @@ spring:
 
 test:
   topic: embedded-test-topic
+
+
+
 
