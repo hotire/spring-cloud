@@ -4,16 +4,22 @@ import java.util.Collections;
 import java.util.List;
 
 import org.springframework.cloud.openfeign.FallbackFactory;
+import org.springframework.context.annotation.Configuration;
 
 import com.github.hotire.webservice.feign.Post;
 
-public class MyFeignClientFallbackFactory implements FallbackFactory<FallbackJSONPlaceHolderClient> {
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Configuration
+public class FallbackJSONPlaceHolderClientFactory implements FallbackFactory<FallbackJSONPlaceHolderClient> {
 
     private final FallbackJSONPlaceHolderClient delegate = new FallbackJSONPlaceHolderClient() {
 
         @Override
         public List<Post> getPostsWithPathAndQuery(Long id, String name) {
-            return Collections.emptyList();
+            throw new RuntimeException("error");
+//            return Collections.emptyList();
         }
 
         @Override
@@ -24,6 +30,7 @@ public class MyFeignClientFallbackFactory implements FallbackFactory<FallbackJSO
 
     @Override
     public FallbackJSONPlaceHolderClient create(Throwable cause) {
+//        log.error(cause.getMessage(), cause);
         return delegate;
     }
 }
