@@ -1,5 +1,11 @@
 # Fallback && Circuit-Breaker
 
+1. Circuit-Breaker 구현체 Dependency 주입 (Hystrix..)
+
+2. feign.circuitbreaker.enabled: true
+
+
+
 ### Command
 - https://gunju-ko.github.io/spring-cloud/netflixoss/2018/12/08/HelloHystrixCommnad.html
 
