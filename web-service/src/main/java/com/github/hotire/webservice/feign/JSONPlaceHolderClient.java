@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(value = "jplaceholder", url = "https://jsonplaceholder.typicode.com/", fallback = JSONPlaceHolderClientFallback.class, configuration = JSONPlaceHolderClientConfig.class)
+@FeignClient(value = "jplaceholder", url = "https://jsonplaceholder.typicode.com/", configuration = JSONPlaceHolderClientConfig.class)
 public interface JSONPlaceHolderClient {
 
     @GetMapping("/posts/{id}/123")
