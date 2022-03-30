@@ -11,7 +11,7 @@ hystrix.command:
       sleepWindowInMilliseconds: 10000
       errorThresholdPercentage: 50
       metrics.rollingStats.timeInMilliseconds: 3000
-  execution.isolation.thread.timeoutInMilliseconds: 100000
+    execution.isolation.thread.timeoutInMilliseconds: 100000
 
 
 ---
