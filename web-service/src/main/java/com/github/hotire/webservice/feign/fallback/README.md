@@ -8,6 +8,7 @@
 
 ### Command
 - https://gunju-ko.github.io/spring-cloud/netflixoss/2018/12/08/HelloHystrixCommnad.html
+- https://github.com/Netflix/Hystrix/wiki/Configuration#CommandExecution
 
 ### Event
 
