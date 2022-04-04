@@ -5,6 +5,8 @@
 2. feign.circuitbreaker.enabled: true
 
 
+## Hystrix
+
 ### Command
 - https://gunju-ko.github.io/spring-cloud/netflixoss/2018/12/08/HelloHystrixCommnad.html
 - https://github.com/Netflix/Hystrix/wiki/Configuration#CommandExecution
@@ -37,3 +39,6 @@ command timeout 값
 ### Getting Started
 - https://docs.spring.io/spring-cloud-openfeign/docs/current/reference/html/#spring-cloud-feign-circuitbreaker
 - https://sabarada.tistory.com/118
+
+## Resilience4j
+https://sabarada.tistory.com/205
