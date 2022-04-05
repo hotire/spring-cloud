@@ -4,8 +4,15 @@
 
 2. feign.circuitbreaker.enabled: true
 
+- https://github.com/spring-cloud/spring-cloud-circuitbreaker
 
 ## Hystrix
+
+"일종의 Bulkhead 패턴이며, 각 서비스에 대한 의존성을 격리하고 동시 접근을 제한한다."
+
+### Hystrix, How it Works
+
+https://github.com/Netflix/Hystrix/wiki/How-it-Works#isolation
 
 ### Command
 - https://gunju-ko.github.io/spring-cloud/netflixoss/2018/12/08/HelloHystrixCommnad.html
