@@ -1,10 +1,11 @@
 package com.github.hotire.webservice.feign.fallback;
 
-import com.netflix.hystrix.exception.HystrixBadRequestException;
-
 import feign.FeignException;
 
-public class IgnoreFallbackFeignException extends HystrixBadRequestException {
+/**
+ * HystrixBadRequestException
+ */
+public class IgnoreFallbackFeignException extends RuntimeException {
 
     private final FeignException feignException;
 
