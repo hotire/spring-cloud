@@ -1,4 +1,4 @@
-package com.github.hotire.webservice.feign.fallback;
+package com.github.hotire.webservice.feign.fallback.hystrix;
 
 import feign.FeignException;
 
