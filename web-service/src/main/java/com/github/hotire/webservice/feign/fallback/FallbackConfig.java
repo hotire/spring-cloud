@@ -27,7 +27,7 @@ public class FallbackConfig {
 //                if (status >= 500) {
 //                    return new IgnoreFallbackFeignException(exception);
 //                }
-                if (status >= 500) {
+                if (status >= 400) {
                     return new RetryableException(
                             response.status(),
                             exception.getMessage(),
