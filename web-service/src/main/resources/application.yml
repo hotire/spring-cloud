@@ -22,7 +22,7 @@ resilience4j:
         permittedNumberOfCallsInHalfOpenState: 10
         automaticTransitionFromOpenToHalfOpenEnabled: true
         slidingWindowSize: 100
-        minimumNumberOfCalls: 30
+        minimumNumberOfCalls: 1
         ignoreExceptions:
           - feign.FeignException.FeignClientException
   timelimiter:
