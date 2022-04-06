@@ -11,7 +11,11 @@ class JSONPlaceHolderClientTest {
     private JSONPlaceHolderClient client;
 
     @Test
-    void getPosts() {
-        client.getPostsWithPathAndQuery(1L, "hello");
+    void getPosts() throws InterruptedException {
+        try {
+            client.getPostsWithPathAndQuery(1L, "hello");
+        } catch (Exception e) {
+        }
+        client.getPosts();
     }
 }
