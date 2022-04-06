@@ -1,0 +1,10 @@
+resilience4j:
+  circuitbreaker:
+    configs:
+      hotire:
+        ringBufferSizeInClosedState: 10
+        ringBufferSizeInHalfOpenState: 30
+        waitDurationInOpenState: 10000ms
+        failureRateThreshold: 20
+        registerHealthIndicator: false
+
