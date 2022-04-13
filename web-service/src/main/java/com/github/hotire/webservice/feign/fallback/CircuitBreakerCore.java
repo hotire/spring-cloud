@@ -7,6 +7,7 @@ import org.springframework.cloud.client.circuitbreaker.NoFallbackAvailableExcept
 
 /**
  * @see org.springframework.cloud.client.circuitbreaker.CircuitBreaker
+ * @see org.springframework.cloud.circuitbreaker.resilience4j.Resilience4JCircuitBreaker
  */
 public interface CircuitBreakerCore {
 
