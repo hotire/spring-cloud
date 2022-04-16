@@ -15,5 +15,5 @@ public interface FallbackJSONPlaceHolderClient {
     List<Post> getPostsWithPathAndQuery(@PathVariable Long id, @RequestParam String name);
 
     @GetMapping("/posts")
-    List<Post> getPosts();
+    HttpResponse<List<Post>> getPosts();
 }
