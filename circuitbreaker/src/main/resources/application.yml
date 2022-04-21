@@ -1,3 +1,4 @@
+
 resilience4j:
   circuitbreaker:
     instances:
