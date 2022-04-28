@@ -5,7 +5,10 @@ import feign.InvocationHandlerFactory.MethodHandler;
 /**
  * @see feign.SynchronousMethodHandler
  */
-public class CustomMethodHandler implements MethodHandler {
+public class MethodHandlerCore implements MethodHandler {
+    /**
+     * @see feign.SynchronousMethodHandler#invoke(Object[])
+     */
     @Override
     public Object invoke(Object[] argv) throws Throwable {
         return null;
