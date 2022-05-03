@@ -15,13 +15,14 @@ class FallbackJSONPlaceHolderClientTest {
 
     @Test
     void getPostsWithPathAndQuery() throws InterruptedException {
-        client.getPostsWithPathAndQuery(1L, "");
-        client.getPostsWithPathAndQuery(1L, "");
-        client.getPostsWithPathAndQuery(1L, "");
-        client.getPostsWithPathAndQuery(1L, "");
-        client.getPostsWithPathAndQuery(1L, "");
-        client.getPostsWithPathAndQuery(1L, "");
-        client.getPostsWithPathAndQuery(1L, "");
+        try {
+            client.getPostsWithPathAndQuery(1L, "");
+        } catch (Exception e) {
+        }
+        try {
+            client.getPostsWithPathAndQuery(1L, "");
+        } catch (Exception e) {
+        }
 
         Thread.sleep(3000L);
     }

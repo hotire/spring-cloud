@@ -15,16 +15,19 @@ hystrix.command:
 
 resilience4j:
   circuitbreaker:
-    instances:
-      fallbackClient_getPostsWithPathAndQuery:
-        waitDurationInOpenState: 10s
-        failureRateThreshold: 50
-        permittedNumberOfCallsInHalfOpenState: 10
-        automaticTransitionFromOpenToHalfOpenEnabled: true
-        slidingWindowSize: 100
+    configs:
+      default:
         minimumNumberOfCalls: 1
-        ignoreExceptions:
-          - feign.FeignException.FeignClientException
+  #    instances:
+  #      fallbackClient_getPostsWithPathAndQuery:
+  #        waitDurationInOpenState: 10s
+  #        failureRateThreshold: 50
+  #        permittedNumberOfCallsInHalfOpenState: 10
+  #        automaticTransitionFromOpenToHalfOpenEnabled: true
+  #        slidingWindowSize: 100
+  #        minimumNumberOfCalls: 1
+  #        ignoreExceptions:
+  #          - feign.FeignException.FeignClientException
   timelimiter:
     instances:
       fallbackClient_getPostsWithPathAndQuery:

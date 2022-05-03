@@ -7,13 +7,12 @@ import org.springframework.context.annotation.Bean;
 import feign.FeignException;
 import feign.FeignException.FeignClientException;
 import feign.Response;
-import feign.RetryableException;
 import feign.Retryer;
 import feign.codec.ErrorDecoder;
 
 //@Configuration
 public class FallbackConfig {
-
+    
     /**
      * @see FeignClientException
      */
@@ -27,15 +26,15 @@ public class FallbackConfig {
 //                if (status >= 500) {
 //                    return new IgnoreFallbackFeignException(exception);
 //                }
-                if (status >= 400) {
-                    return new RetryableException(
-                            response.status(),
-                            exception.getMessage(),
-                            response.request().httpMethod(),
-                            exception,
-                            null,
-                            response.request());
-                }
+//                if (status >= 400) {
+//                    return new RetryableException(
+//                            response.status(),
+//                            exception.getMessage(),
+//                            response.request().httpMethod(),
+//                            exception,
+//                            null,
+//                            response.request());
+//                }
                 return exception;
             }
         };

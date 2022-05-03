@@ -19,12 +19,15 @@ public class FallbackJSONPlaceHolderClientFactory implements FallbackFactory<Fal
         @Override
         public List<Post> getPostsWithPathAndQuery(Long id, String name) {
 //            throw new RuntimeException("error");
+            if (1 == 1) {
+                throw new RuntimeException("custom error");
+            }
             return Collections.emptyList();
         }
 
         @Override
-        public List<Post> getPosts() {
-            return Collections.emptyList();
+        public HttpResponse<List<Post>> getPosts() {
+            return new HttpResponse(Collections.emptyList());
         }
     };
 
