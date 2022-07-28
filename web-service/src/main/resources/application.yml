@@ -1,4 +1,11 @@
 feign:
+  client:
+    config:
+      default:
+        loggerLevel: BASIC
+      fallbackClient:
+        connectTimeout: 5000
+        readTimeout: 10
   hystrix:
     enabled: true
   circuitbreaker:
@@ -33,9 +40,14 @@ resilience4j:
       fallbackClient_getPostsWithPathAndQuery:
         timeoutDuration: 10s
         cancelRunningFuture: true
+      fallbackClient_getPosts:
+        timeoutDuration: 20s
+        cancelRunningFuture: true
   bulkhead:
     instances:
       fallbackClient_getPostsWithPathAndQuery:
+        maxConcurrentCalls: 25
+      fallbackClient_getPosts:
         maxConcurrentCalls: 25
 
 ---
