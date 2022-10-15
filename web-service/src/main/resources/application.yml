@@ -67,3 +67,8 @@ test:
 
 
 
+feign:
+  autoconfiguration:
+    jackson:
+      enabled: true
+
