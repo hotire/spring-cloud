@@ -7,4 +7,10 @@ import io.github.resilience4j.ratelimiter.RateLimiter;
  */
 public class RateLimiterCore {
 
+    /**
+     * @see RateLimiter#acquirePermission(int) 
+     */
+    boolean acquirePermission(int permits) {
+        return false;
+    }
 }
