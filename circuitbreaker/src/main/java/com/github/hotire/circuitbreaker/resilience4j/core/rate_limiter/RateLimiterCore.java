@@ -10,6 +10,13 @@ import io.github.resilience4j.ratelimiter.internal.AtomicRateLimiter;
 public class RateLimiterCore {
 
     /**
+     * @see RateLimiter#waitForPermission(RateLimiter, int) 
+     */
+    static void waitForPermission(final RateLimiter rateLimiter, int permits) {
+        RateLimiter.waitForPermission(rateLimiter, permits);
+    }
+
+    /**
      * @see RateLimiter#acquirePermission(int) 
      */
     boolean acquirePermission(int permits) {
