@@ -13,6 +13,7 @@ public class CircuitBreakerCore {
      * @see CircuitBreaker#acquirePermission()
      * @see CircuitBreakerStateMachine#acquirePermission()
      * @see io.github.resilience4j.circuitbreaker.internal.CircuitBreakerStateMachine.CircuitBreakerState#acquirePermission()
+     * @see io.github.resilience4j.circuitbreaker.internal.CircuitBreakerStateMachine.CircuitBreakerState#tryAcquirePermission()()
      */
     void acquirePermission() {
 
