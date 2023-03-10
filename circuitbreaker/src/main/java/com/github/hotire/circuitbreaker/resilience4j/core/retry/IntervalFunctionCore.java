@@ -19,4 +19,16 @@ public class IntervalFunctionCore {
      * @see IntervalFunction#DEFAULT_RANDOMIZATION_FACTOR
      */
     double DEFAULT_RANDOMIZATION_FACTOR = 0.5;
+
+
+    /**
+     * @see IntervalFunction#ofExponentialBackoff(long, double, long)
+     */
+    static IntervalFunction ofExponentialRandomBackoff(
+        long initialIntervalMillis,
+        double multiplier,
+        double randomizationFactor
+    ) {
+        return IntervalFunction.ofExponentialRandomBackoff(initialIntervalMillis,multiplier,randomizationFactor);
+    }
 }
