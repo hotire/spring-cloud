@@ -9,6 +9,8 @@ public class JitterBasedRetryer implements Retryer  {
     private final int maxAttempts;
     private final long period;
     private final long maxPeriod;
+    private final double multiplier;
+    private final double randomizationFactor;
     int attempt;
     long sleptForMillis;
 
