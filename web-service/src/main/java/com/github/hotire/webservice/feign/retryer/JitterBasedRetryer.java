@@ -52,6 +52,6 @@ public class JitterBasedRetryer implements Retryer  {
 
     @Override
     public Retryer clone() {
-        return new JitterBasedRetryer(maxAttempts, period, maxPeriod);
+        return new JitterBasedRetryer(maxAttempts, period, maxPeriod, multiplier, randomizationFactor);
     }
 }
