@@ -2,6 +2,7 @@ package com.github.hotire.webservice.feign.retryer;
 
 import feign.RetryableException;
 import feign.Retryer;
+import io.github.resilience4j.core.IntervalFunction;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -46,8 +47,8 @@ public class JitterBasedRetryer implements Retryer  {
     }
 
     protected long nextMaxInterval() {
-        long interval = (long) (period * Math.pow(1.5, attempt - 1));
-        return Math.min(interval, maxPeriod);
+        return IntervalFunction.ofExponentialRandomBackoff(period, multiplier, randomizationFactor, maxPeriod)
+            .apply(attempt);
     }
 
     @Override
