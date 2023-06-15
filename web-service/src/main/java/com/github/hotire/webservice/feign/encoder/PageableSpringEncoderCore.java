@@ -11,7 +11,7 @@ import org.springframework.cloud.openfeign.support.PageableSpringEncoder;
 public class PageableSpringEncoderCore {
 
     /**
-     * @see PageableSpringEncoder#encode(Object, Type, RequestTemplate) 
+     * @see PageableSpringEncoder#encode(Object, Type, RequestTemplate)
      */
     public void encode(Object object, Type bodyType, RequestTemplate template) throws EncodeException {
 
