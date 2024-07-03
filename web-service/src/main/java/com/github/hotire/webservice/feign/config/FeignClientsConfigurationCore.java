@@ -12,7 +12,7 @@ public class FeignClientsConfigurationCore {
 
 
     /**
-     * @see FeignClientsConfiguration#feignDecoder(ObjectProvider) 
+     * @see FeignClientsConfiguration#feignDecoder(ObjectProvider)
      */
     public Decoder feignDecoder(ObjectProvider<HttpMessageConverterCustomizer> customizers) {
         return null;
